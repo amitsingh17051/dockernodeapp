@@ -1,0 +1,10 @@
+services:
+  dockernode:
+    build: .
+    ports:
+      - "3000:4000"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - PORT=4000
